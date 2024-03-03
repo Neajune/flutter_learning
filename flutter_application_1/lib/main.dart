@@ -1,18 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-
+      home: Scaffold(
+        backgroundColor: Colors.green.shade200 ,
+        body: const Column(
+          children: [
+            SizedBox(
+              height: 80,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Column(
+                  children: [
+                  Text('Hey, Selena',
+                    style: TextStyle(
+                      color: Colors.white,
+                      ),
+                    ),
+                  Text('Welcome back',
+                    style: TextStyle(
+                      color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
