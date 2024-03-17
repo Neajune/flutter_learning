@@ -19,7 +19,7 @@ class App extends StatelessWidget {
               SizedBox(
                 height: 80,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
@@ -43,20 +43,81 @@ class App extends StatelessWidget {
                     ],
                   )
                 ],
-              ), 
-              SizedBox(
+              ),
+              const SizedBox(
                 height: 120,
               ),
-              //Total Balance (Text), white color
-              Text(
-                'Total Balance',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.white.withOpacity(0.8),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: const [
+                  Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xFF1F2123),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(30),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Euro',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 32,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '6 428',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "EUR",
+                                style: TextStyle(
+                                  color: Colors.white.withOpacity(0.8),
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
-          ), 
+          ),
         ),
       ),
     );
